@@ -12,5 +12,5 @@ class VerificationCode(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     verification_code = models.CharField(max_length=6, blank=True, null=True)
     code_expires_at = models.DateTimeField(blank=True, null=True)
-
+    is_confirmed = models.BooleanField(default=False)
 
